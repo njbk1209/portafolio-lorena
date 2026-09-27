@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Irma Lorena Medrano</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Lora', 'serif'],
+                        sans: ['Source Sans 3', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#f7f5f0', // Tono papel perlado
+                            dark: '#2c2c2a',  // Gris casi negro
+                            accent: '#8b3a3a', // Rojo terracota/borgoña
+                            muted: '#8e8c84'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Clases para animación con JavaScript */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            visibility: hidden;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+        
+        /* Detalles decorativos */
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #8b3a3a;
+            border-radius: 50%;
+            position: absolute;
+            left: -6px;
+            top: 6px;
+        }
+        .timeline-line {
+            border-left: 2px solid #e5e5e5;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="font-sans bg-brand-light text-brand-dark antialiased">
+
+    <!-- Navegación Sticky -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-200 transition-all duration-300" id="navbar">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-serif font-semibold text-xl tracking-wide text-brand-accent">ILM.</a>
+            <div class="space-x-6 hidden md:block text-sm font-semibold tracking-wider text-gray-600">
+                <a href="#perfil" class="hover:text-brand-accent transition-colors">PERFIL</a>
+                <a href="#experiencia" class="hover:text-brand-accent transition-colors">EXPERIENCIA</a>
+                <a href="#formacion" class="hover:text-brand-accent transition-colors">FORMACIÓN</a>
+                <a href="#contacto" class="hover:text-brand-accent transition-colors">CONTACTO</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <header class="pt-32 pb-20 px-6 max-w-4xl mx-auto text-center fade-in-section">
+        <h1 class="font-serif text-4xl md:text-6xl text-brand-dark mb-4 leading-tight">Irma Lorena Medrano</h1>
+        <p class="text-xl md:text-2xl font-light text-brand-muted mb-8 italic font-serif">Docente de Castellano y Literatura & Abogada</p>
+        <div class="w-24 h-1 bg-brand-accent mx-auto mb-8"></div>
+        <p class="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
+            Profesional con ética y responsabilidad. Comprometida con altos estándares de calidad pedagógica y legal. Motivada al logro de objetivos, con sinergia para el trabajo en equipo y la resolución de desafíos.
+        </p>
+        <a href="#contacto" class="inline-block mt-10 px-8 py-3 bg-brand-accent text-white font-semibold tracking-wider text-sm hover:bg-red-900 transition-colors shadow-lg">CONTACTAR</a>
+    </header>
+
+    <!-- Sección de Experiencia Laboral -->
+    <section id="experiencia" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-serif text-3xl font-semibold mb-12 text-center text-brand-dark">Trayectoria Profesional</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Columna Educación -->
+                <div>
+                    <h3 class="text-xl font-bold mb-8 text-brand-accent border-b pb-2"><i class="fas fa-book-open mr-2"></i> Área Educativa</h3>
+                    <div class="timeline-line pl-6 space-y-8">
+                        
+                        <div class="relative fade-in-section">
+                            <div class="timeline-dot"></div>
+                            <span class="text-sm font-semibold text-brand-muted tracking-widest">2019 - PRESENTE</span>
+                            <h4 class="font-serif text-lg font-bold mt-1">Profesora de Castellano</h4>
+                            <p class="text-brand-accent font-medium text-sm">U.E. Colegio La Concepción</p>
+                            <p class="mt-2 text-gray-600 text-sm">Clases de castellano y literatura orientadas a estudiantes de primero y segundo año de Media General.</p>
+                        </div>
+
+                        <div class="relative fade-in-section">
+                            <div class="timeline-dot"></div>
+                            <span class="text-sm font-semibold text-brand-muted tracking-widest">2020 - PRESENTE</span>
+                            <h4 class="font-serif text-lg font-bold mt-1">Profesora de Castellano</h4>
+                            <p class="text-brand-accent font-medium text-sm">U.E. Colegio El Placer</p>
+                            <p class="mt-2 text-gray-600 text-sm">Formación académica en castellano y literatura para estudiantes desde primero hasta quinto año de Media General.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Legal / Administrativa -->
+                <div>
+                    <h3 class="text-xl font-bold mb-8 text-brand-accent border-b pb-2"><i class="fas fa-balance-scale mr-2"></i> Área Legal y Administrativa</h3>
+                    <div class="timeline-line pl-6 space-y-8">
+                        
+                        <div class="relative fade-in-section">
+                            <div class="timeline-dot"></div>
+                            <span class="text-sm font-semibold text-brand-muted tracking-widest">2009 - 2018</span>
+                            <h4 class="font-serif text-lg font-bold mt-1">Abogada & Asistente</h4>
+                            <p class="text-brand-accent font-medium text-sm">García López & Asociados, S.C.</p>
+                            <p class="mt-2 text-gray-600 text-sm">Elaboración de documentos legales civiles y mercantiles (constitución de empresas, contratos). Gestión contable, cálculo de nóminas, obligaciones tributarias (IVA/ISLR) y conciliaciones bancarias.</p>
+                        </div>
+
+                        <div class="relative fade-in-section">
+                            <div class="timeline-dot"></div>
+                            <span class="text-sm font-semibold text-brand-muted tracking-widest">2006 - 2008</span>
+                            <h4 class="font-serif text-lg font-bold mt-1">Asistente Administrativo</h4>
+                            <p class="text-brand-accent font-medium text-sm">Suministros Atenea, C.A.</p>
+                            <p class="mt-2 text-gray-600 text-sm">Cumplimiento de obligaciones tributarias, retenciones laborales, gestión de facturación, cuentas por pagar y expedientes de importación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Formación Académica -->
+    <section id="formacion" class="py-20 bg-brand-light">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="font-serif text-3xl font-semibold mb-12 text-center text-brand-dark">Estudios y Capacitación</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <!-- Tarjeta 1 -->
+                <div class="bg-white p-6 border-t-4 border-brand-accent shadow-sm hover:shadow-md transition-shadow fade-in-section">
+                    <div class="text-brand-accent mb-3"><i class="fas fa-graduation-cap text-2xl"></i></div>
+                    <h4 class="font-serif font-bold text-lg leading-tight mb-2">Profesor en Educación Primaria</h4>
+                    <p class="text-sm text-gray-500 mb-3">Instituto de Mejoramiento Profesional del Magisterio (IMPM)</p>
+                    <span class="inline-block px-2 py-1 bg-gray-100 text-xs font-semibold text-gray-600 rounded">En curso (5to periodo)</span>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="bg-white p-6 border-t-4 border-brand-accent shadow-sm hover:shadow-md transition-shadow fade-in-section">
+                    <div class="text-brand-accent mb-3"><i class="fas fa-certificate text-2xl"></i></div>
+                    <h4 class="font-serif font-bold text-lg leading-tight mb-2">Diplomado en Competencias Pedagógicas</h4>
+                    <p class="text-sm text-gray-500 mb-3">Universidad Pedagógica Experimental Libertador (UPEL)</p>
+                    <span class="inline-block px-2 py-1 bg-gray-100 text-xs font-semibold text-gray-600 rounded">2020</span>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="bg-white p-6 border-t-4 border-brand-accent shadow-sm hover:shadow-md transition-shadow fade-in-section">
+                    <div class="text-brand-accent mb-3"><i class="fas fa-gavel text-2xl"></i></div>
+                    <h4 class="font-serif font-bold text-lg leading-tight mb-2">Abogada</h4>
+                    <p class="text-sm text-gray-500 mb-3">Universidad Santa María (USM) <br>INPRE N° 121.645</p>
+                    <span class="inline-block px-2 py-1 bg-gray-100 text-xs font-semibold text-gray-600 rounded">2005</span>
+                </div>
+            </div>
+
+            <!-- Cursos Destacados -->
+            <div class="bg-white p-8 border border-gray-200 fade-in-section">
+                <h3 class="font-serif font-semibold text-xl mb-6 text-brand-dark border-l-4 border-brand-accent pl-3">Formación Especializada Reciente</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-brand-accent mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-semibold text-gray-800">Foro Autismo: Estrategias para la inclusión y apoyo en clase</p>
+                            <p class="text-sm text-gray-500">UNICEF (Abril 2024)</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-brand-accent mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-semibold text-gray-800">Actualización en Dificultades de Aprendizaje</p>
+                            <p class="text-sm text-gray-500">Centro Médico Docente La Trinidad (Mayo 2024)</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-brand-accent mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-semibold text-gray-800">Obligaciones Tributarias y Laborales (ISLR, IVA, Prestaciones)</p>
+                            <p class="text-sm text-gray-500">García López & Asociados (2018)</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-20 bg-brand-dark text-white text-center">
+        <div class="max-w-3xl mx-auto px-6 fade-in-section">
+            <h2 class="font-serif text-3xl font-semibold mb-8">Ponte en contacto</h2>
+            <p class="text-gray-400 mb-10 text-lg">Disponible para oportunidades en el área docente, legal y administrativa.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
+                <a href="mailto:lorenamedrano0202@gmail.com" class="flex items-center text-gray-300 hover:text-white transition-colors">
+                    <i class="fas fa-envelope text-brand-accent text-2xl mr-3"></i>
+                    lorenamedrano0202@gmail.com
+                </a>
+                <div class="flex items-center text-gray-300">
+                    <i class="fas fa-phone text-brand-accent text-2xl mr-3"></i>
+                    (0414) 251-95-09 / (0424) 128-42-40
+                </div>
+            </div>
+
+            <div class="text-sm text-gray-500 border-t border-gray-700 pt-8">
+                <p><i class="fas fa-map-marker-alt mr-2"></i> Residencias Parque Manzanares, Baruta, Caracas.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-6 text-center text-gray-600 text-xs tracking-widest">
+        &copy; 2025 IRMA LORENA MEDRANO. TODOS LOS DERECHOS RESERVADOS.
+    </footer>
+
+    <!-- Script de Animaciones y Navbar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Observer para animaciones fade-in
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-section').forEach((section) => {
+                observer.observe(section);
+            });
+
+            // Sombra en Navbar al hacer scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-md');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
